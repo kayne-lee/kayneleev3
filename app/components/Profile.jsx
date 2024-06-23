@@ -11,6 +11,7 @@ export default function Profile(
   const handleDivClick = (divName) => {
     setActiveDiv(divName);
   };
+  
   return (
     <div>
       <div className="w-[935px] flex flex-row border-black">
@@ -45,22 +46,36 @@ export default function Profile(
       </div>
       {/* stories */}
       <div className="flex flex-row ml-[48px] mt-[44px] gap-[40px]">
-        <div className=" flex flex-row items-center">
+        <div className="flex flex-row items-center">
           <div className="px-[23px] py-[11px] flex flex-col">
-          <Image src="/queens.png" width={67} height={67} className="rounded-full"/>
-            <div className="  pt-[15px] flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
+              <div className="w-[76px] h-[76px] rounded-full bg-gray-200 flex items-center justify-center">
+                <div className="w-[72px] h-[72px] rounded-full bg-white flex items-center justify-center">
+                  <Image src="/queens.png" width={67} height={67} className="rounded-full"/>
+                </div>
+              </div>
+            </div>
+            <div className="pt-[15px] flex items-center justify-center">
               <Image src="/book.png" width={20} height={20} className=""/>
             </div>
           </div>
         </div>
-        <div className=" flex flex-row items-center">
+        <div className="flex flex-row items-center">
           <div className="px-[23px] py-[11px] flex flex-col">
-            <Image src="/tech.png" width={67} height={67} className="rounded-full"/>
-            <div className="  pt-[15px] flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
+              <div className="w-[76px] h-[76px] rounded-full bg-gray-200 flex items-center justify-center">
+                <div className="w-[72px] h-[72px] rounded-full bg-white flex items-center justify-center">
+                  <Image src="/tech.png" width={67} height={67} className="rounded-full"/>
+                </div>
+              </div>
+            </div>
+            <div className="pt-[15px] flex items-center justify-center">
               <Image src="/computer.webp" width={20} height={20} className=""/>
             </div>
           </div>
         </div>
+
+
       </div>
 
       <div className=" mt-[44px] w-[935px] h-[1px] bg-[#DBDBDB]"/>
@@ -73,8 +88,8 @@ export default function Profile(
         >
           <div className=" mt-[17px] flex flex-row items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <g clip-path="url(#clip0_108_2503)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 0.375H0.75C0.55 0.375 0.375 0.55 0.375 0.75V11.25C0.375 11.45 0.55 11.625 0.75 11.625H11.25C11.45 11.625 11.625 11.45 11.625 11.25V0.75C11.625 0.55 11.45 0.375 11.25 0.375ZM1.125 1.125H3.875V3.875H1.125V1.125ZM1.125 4.625H3.875V7.375H1.125V4.625ZM3.875 10.875H1.125V8.125H3.875V10.875ZM7.375 10.875H4.625V8.125H7.375V10.875ZM7.375 7.375H4.625V4.625H7.375V7.375ZM7.375 3.875H4.625V1.125H7.375V3.875ZM10.875 10.875H8.125V8.125H10.875V10.875ZM10.875 7.375H8.125V4.625H10.875V7.375ZM10.875 3.875H8.125V1.125H10.875V3.875Z" fill="#262626"/>
+              <g clipPath="url(#clip0_108_2503)">
+                <path fill-rule="evenodd" clipRule="evenodd" d="M11.25 0.375H0.75C0.55 0.375 0.375 0.55 0.375 0.75V11.25C0.375 11.45 0.55 11.625 0.75 11.625H11.25C11.45 11.625 11.625 11.45 11.625 11.25V0.75C11.625 0.55 11.45 0.375 11.25 0.375ZM1.125 1.125H3.875V3.875H1.125V1.125ZM1.125 4.625H3.875V7.375H1.125V4.625ZM3.875 10.875H1.125V8.125H3.875V10.875ZM7.375 10.875H4.625V8.125H7.375V10.875ZM7.375 7.375H4.625V4.625H7.375V7.375ZM7.375 3.875H4.625V1.125H7.375V3.875ZM10.875 10.875H8.125V8.125H10.875V10.875ZM10.875 7.375H8.125V4.625H10.875V7.375ZM10.875 3.875H8.125V1.125H10.875V3.875Z" fill="#262626"/>
               </g>
               <defs>
                 <clipPath id="clip0_108_2503">
@@ -126,9 +141,23 @@ export default function Profile(
       </div>
       
       {activeDiv === 'professional' && (
-        <div>
-          <p>Professional content goes here.</p>
-          <img src="professional-image.jpg" alt="Professional" />
+        <div className="flex flex-row gap-[28px] w-[935px] flex-wrap mt-[20px]">
+          <div className="w-[293px] h-[293px] border-black border-1 flex justify-center items-center">
+            <Image src="/work/straffic.png"
+              width={293} height={293} alt='straffic' />
+          </div>
+          <div className="w-[293px] h-[293px] border-black border-2 flex justify-center items-center">
+            <Image src="/work/queens.jpg"
+              width={293} height={293} alt='straffic' />
+          </div>
+          <div className="w-[293px] h-[293px] border-black border-2 flex justify-center items-center">
+            <Image src="/work/debacle.jpeg"
+              width={293} height={293} alt='straffic' />
+          </div>
+          <div className="w-[293px] h-[293px] border-black border-2 flex justify-center items-center">
+            <Image src="/work/denso.png"
+              width={293} height={293} alt='straffic' />
+          </div>
         </div>
       )}
       {activeDiv === 'extraCurriculars' && (
